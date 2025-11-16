@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Copy...Download</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="card">
+    <header class="header">
+      <img src="icons/convert.png" class="logo" alt="logo" />
+    </header>
+
+    <main class="main">
+      <label class="label">Preview (clipboard)</label>
+      <textarea id="preview" readonly placeholder="Click “Load” to read clipboard..."></textarea>
+
+      <div class="controls">
+        <button id="loadBtn" class="btn primary">Load clipboard</button>
+        <button id="clearBtn" class="btn ghost">Clear</button>
+      </div>
+
+      <div class="text">
+    </div>
+    
+    <div class="download-row">
+        <input id="filename" type="text" value="File-Name" />
+        <button id="downloadTxt" class="btn accent">Download .txt</button>
+        <button id="downloadPdf" class="btn accent">Download .pdf</button>
+      </div>
+
+      <div class="small-note">
+        Tip: You Don't Need to add file extention just the name enough .
+      </div>
+    </main>
+
+    <footer class="footer">
+      <small>Design crafted by Sayed Younis ✨</small>
+    </footer>
+  </div>
+
+  <script src="vendor/jspdf.umd.min.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

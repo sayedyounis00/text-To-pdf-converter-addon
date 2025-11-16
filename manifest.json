@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "Copy → File (TXT / PDF)",
+  "version": "1.0.0",
+  "description": "Grab text from clipboard and download it as .txt or .pdf.",
+  "icons": {
+    "48": "icons/convert.png",
+    "96": "icons/convert.png"
+  },
+
+  "browser_action": {
+    "default_title": "Copy → File",
+    "default_popup": "popup.html"
+  },
+
+  "permissions": [
+    "downloads",
+    "clipboardRead"
+  ],
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "content_security_policy": "script-src 'self'; object-src 'self'"
+}
