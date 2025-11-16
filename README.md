@@ -1,4 +1,3 @@
-&lt;!-- GitHub README --&gt;
 # 📋➡️📄 Copy → File (TXT / PDF) – Firefox Edition  
 A zero-config **Firefox-only** browser extension that grabs whatever is on your clipboard and lets you download it instantly as `.txt` or `.pdf`.  
 No servers, no tracking, no bloat—just two clicks and your text is a file.
