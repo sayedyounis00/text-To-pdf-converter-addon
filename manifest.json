@@ -1,14 +1,15 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Copy → File (TXT / PDF)",
   "version": "1.0.0",
   "description": "Grab text from clipboard and download it as .txt or .pdf.",
+
   "icons": {
-    "48": "icons/convert.png",
-    "96": "icons/convert.png"
+    "48": "convert.png",
+    "96": "convert.png"
   },
 
-  "browser_action": {
+  "action": {
     "default_title": "Copy → File",
     "default_popup": "popup.html"
   },
@@ -18,9 +19,24 @@
     "clipboardRead"
   ],
 
-  "background": {
-    "scripts": ["background.js"]
+  "web_accessible_resources": [
+    {
+      "resources": ["vendor/jspdf.umd.min.js"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
   },
 
-  "content_security_policy": "script-src 'self'; object-src 'self'"
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "text-converter-addon@example.com",
+      "strict_min_version": "109.0",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  }
 }
